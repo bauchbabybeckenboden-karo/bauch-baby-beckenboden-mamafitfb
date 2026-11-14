@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fragebogen – Mamafit</title>
+  <title>Fragebogen – Mamafit · Wunderwerk Frau</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init("11LHuzWy1ssGFyY8Q");</script>
   <style>
     :root {
-      --sand: #f7f2ee;
-      --clay: #c4a882;
-      --earth: #7a5c4a;
-      --deep: #5c2d2d;
-      --sage: #8a7060;
-      --rose: #b87060;
-      --mist: #ede5dc;
-      --ink: #2a1a1a;
+      --sand: #F6EBE8;
+      --clay: #C4A0A0;
+      --earth: #8B6464;
+      --deep: #3D2B2B;
+      --sage: #8B6464;
+      --rose: #C4A0A0;
+      --mist: #F6EBE8;
+      --ink: #3D2B2B;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,7 +31,7 @@
 
     /* Header */
     .header {
-      background: #7a3f3f;
+      background: #8B6464;
       color: var(--sand);
       padding: 50px 40px 44px;
       position: relative;
@@ -241,7 +241,7 @@
       opacity: 0;
       pointer-events: none;
     }
-    .r-option:hover { border-color: var(--clay); background: #fdf9f5; }
+    .r-option:hover { border-color: var(--clay); background: #F6EBE8; }
     .r-option.selected {
       border-color: var(--clay);
       background: rgba(201,169,138,0.15);
@@ -378,29 +378,62 @@
       .header { padding: 40px 20px 36px; }
       .q-card { padding: 18px 18px; }
     }
-  </style>
+  
+  /* ── Wunderwerk Frau: Kopfbereich (einheitlich für alle Seiten) ── */
+  .ww-header { background:#8B6464; color:#F3E9E5; padding:24px 20px; }
+  .ww-inner { max-width:760px; margin:0 auto; display:flex; align-items:center; gap:20px; text-align:left; }
+  .ww-in-hero { margin-bottom:30px; }
+  .ww-logo { height:88px; width:auto; flex-shrink:0; display:block; }
+  .ww-text { min-width:0; }
+  .ww-name { font-family:'Cormorant Garamond', Georgia, serif; font-weight:700; font-size:32px; line-height:1.1; letter-spacing:.5px; color:#F3E9E5; }
+  .ww-line { height:1px; background:#F3E9E5; max-width:320px; margin:8px 0; }
+  .ww-sub { font-family:Arial, Helvetica, sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#F3E9E5; }
+  .ww-tag { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:15px; line-height:1.35; color:#F3E9E5; margin-top:6px; }
+  .ww-topic { font-family:Arial, Helvetica, sans-serif; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#8B6464; text-align:center; margin:0 0 18px; }
+  .ww-topic-hell { color:#F3E9E5; text-align:left; margin:0 0 14px; }
+  @media (max-width:540px) {
+    .ww-inner { flex-direction:column; text-align:center; gap:12px; }
+    .ww-line { margin:8px auto; }
+    .ww-logo { height:76px; }
+    .ww-name { font-size:28px; }
+    .ww-topic-hell { text-align:center; }
+  }
+
+  /* ── Wunderwerk Frau: Lesbarkeit ── */
+  .header-eyebrow { color:#F3E9E5 !important; letter-spacing:3px !important; font-size:12px !important; }
+  .header h1 em { color:#E8D5D0 !important; }
+  .header-subtitle { color:#F3E9E5 !important; }
+  .notice-box { color:#3D2B2B !important; background:#F3E9E5 !important; }
+  .notice-box strong { color:#6F4F4F !important; }
+  [style*="color:var(--rose)"] { color:#6F4F4F !important; }
+  .scale-btn.selected { background:#8B6464 !important; border-color:#8B6464 !important; color:#FFFFFF !important; }
+  .section-num { color:#F3E9E5 !important; }
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
 <header class="header">
   <div class="header-inner">
-    <div class="logo-wrap">
-      <img src="logo.png" alt="Bauch · Baby · Beckenboden Logo" class="logo-img" />
-      <div class="logo-text">
-        <span class="logo-main">Bauch · Baby · Beckenboden</span>
-        <span class="logo-sub">Mamafit</span>
+    <div class="ww-inner ww-in-hero">
+      <img class="ww-logo" src="https://raw.githubusercontent.com/bauchbabybeckenboden-karo/Logos/main/Clitlogo-creme.png" alt="Wunderwerk Frau Logo" />
+      <div class="ww-text">
+        <div class="ww-name">Wunderwerk Frau</div>
+        <div class="ww-line"></div>
+        <div class="ww-sub">Bauch &middot; Baby &middot; Beckenboden</div>
+        <div class="ww-tag">Trageberatungen sowie Sport-, Beckenboden- &amp; somatische Yogakurse für Frauen</div>
       </div>
     </div>
-    <p class="header-eyebrow">Vertraulicher Fragebogen</p>
-    <h1>Willkommen –<br><em>schön, dass du hier bist</em></h1>
-    <p class="header-subtitle">Dieser Fragebogen hilft mir, deine Stunden individuell und achtsam auf dich abzustimmen. Deine Angaben werden vertraulich behandelt.</p>
+    <p class="header-eyebrow">Vertraulicher Fragebogen · Mamafit</p>
+    <h1>Willkommen –<br><em>schön, dass Du hier bist</em></h1>
+    <p class="header-subtitle">Dieser Fragebogen hilft mir, Deine Stunden individuell und achtsam auf Dich abzustimmen. Deine Angaben werden vertraulich behandelt.</p>
   </div>
 </header>
 
 <div class="notice">
   <div class="notice-box">
     <strong>Hinweis zur Sicherheit</strong>
-    Es gibt keine richtigen oder falschen Antworten. Deine Angaben dienen ausschließlich dazu, deine Praxis bestmöglich zu begleiten. Du hast auch bei Pflichtfeldern die Möglichkeit, keine Angabe zu machen.
+    Es gibt keine richtigen oder falschen Antworten. Deine Angaben dienen ausschließlich dazu, Deine Praxis bestmöglich zu begleiten. Du hast auch bei Pflichtfeldern die Möglichkeit, keine Angabe zu machen.
   </div>
 </div>
 
@@ -414,16 +447,16 @@
     </div>
 
     <div class="q-card">
-      <p class="q-label">Wie darf ich dich ansprechen? <span style="color:var(--rose)">*</span></p>
+      <p class="q-label">Wie darf ich Dich ansprechen? <span style="color:var(--rose)">*</span></p>
       <input type="text" id="f-name" placeholder="Name oder Spitzname" />
     </div>
 
     <div class="q-card">
-      <p class="q-label">Wie kann ich dich erreichen? <span style="color:var(--rose)">*</span></p>
+      <p class="q-label">Wie kann ich Dich erreichen? <span style="color:var(--rose)">*</span></p>
       <div class="inline-row" style="margin-bottom:12px">
         <div>
           <p style="font-size:12px;color:var(--earth);margin-bottom:6px;font-weight:300">E-Mail-Adresse <span style="color:var(--rose)">*</span></p>
-          <input type="email" id="f-email" placeholder="deine@email.de" />
+          <input type="email" id="f-email" placeholder="Deine@email.de" />
         </div>
         <div>
           <p style="font-size:12px;color:var(--earth);margin-bottom:6px;font-weight:300">Telefonnummer <span style="color:var(--rose)">*</span></p>
@@ -433,8 +466,8 @@
     </div>
 
     <div class="q-card">
-      <p class="q-label">Was hat dich zu diesem Angebot geführt?</p>
-      <textarea id="f-motivation" placeholder="Erzähl gerne, so viel oder wenig du möchtest …"></textarea>
+      <p class="q-label">Was hat Dich zu diesem Angebot geführt?</p>
+      <textarea id="f-motivation" placeholder="Erzähl gerne, so viel oder wenig Du möchtest …"></textarea>
     </div>
   </div>
 
@@ -448,13 +481,13 @@
     </div>
 
     <div class="q-card">
-      <p class="q-label">Hast du aktuelle körperliche Beschwerden oder Diagnosen, die ich wissen sollte?</p>
+      <p class="q-label">Hast Du aktuelle körperliche Beschwerden oder Diagnosen, die ich wissen sollte?</p>
       <p class="q-hint">z. B. chronische Schmerzen, Autoimmunerkrankungen, orthopädische Einschränkungen</p>
       <textarea id="f-beschwerden" placeholder="Freiwillige Angabe …"></textarea>
     </div>
 
     <div class="q-card">
-      <p class="q-label">Nimmst du regelmäßig Medikamente, die die Körperwahrnehmung beeinflussen können? <span style="color:var(--rose)">*</span></p>
+      <p class="q-label">Nimmst Du regelmäßig Medikamente, die die Körperwahrnehmung beeinflussen können? <span style="color:var(--rose)">*</span></p>
       <div class="radio-group" id="meds-group">
         <label class="r-option" onclick="selectRadio(event, this, 'meds-group')">
           <input type="radio" name="meds" value="nein" /><span class="r-dot"></span>Nein
@@ -479,7 +512,7 @@
     </div>
 
     <div class="q-card">
-      <p class="q-label">Hast du Beschwerden im Beckenbereich oder Beckenboden? <span style="color:var(--rose)">*</span></p>
+      <p class="q-label">Hast Du Beschwerden im Beckenbereich oder Beckenboden? <span style="color:var(--rose)">*</span></p>
       <div class="check-group column" id="becken-group">
         <label class="r-option" onclick="selectCheck(event, this)">
           <input type="checkbox" name="becken" value="keine" /><span class="c-dot"></span>Keine aktuellen Beschwerden
@@ -512,7 +545,7 @@
     </div>
 
     <div class="q-card">
-      <p class="q-label">Wie hast du entbunden? <span style="color:var(--rose)">*</span></p>
+      <p class="q-label">Wie hast Du entbunden? <span style="color:var(--rose)">*</span></p>
       <div class="radio-group" id="birth-group">
         <label class="r-option" onclick="selectRadio(event, this, 'birth-group')">
           <input type="radio" name="birth" value="vaginal" /><span class="r-dot"></span>Vaginal
@@ -528,7 +561,7 @@
 
     <div class="q-card">
       <p class="q-label">Bist Du momentan schwanger? <span style="color:var(--rose)">*</span></p>
-      <p class="q-hint">Falls ja: Der passende Kurs für dich wäre <a href="https://www.bauch-baby-beckenboden.de/schwanger/" target="_blank" style="color:var(--rose);text-decoration:underline;">Schwangerfit</a> – schau gerne dort vorbei!</p>
+      <p class="q-hint">Falls ja: Der passende Kurs für Dich wäre <a href="https://www.bauch-baby-beckenboden.de/schwanger/" target="_blank" style="color:var(--rose);text-decoration:underline;">Schwangerfit</a> – schau gerne dort vorbei!</p>
       <div class="radio-group" id="schwanger-group">
         <label class="r-option" onclick="selectRadio(event, this, 'schwanger-group')">
           <input type="radio" name="schwanger" value="ja" /><span class="r-dot"></span>Ja
@@ -597,12 +630,12 @@
   <div class="section">
     <div class="section-label">
       <div class="section-num">5</div>
-      <h2 class="section-title">Über dich</h2>
+      <h2 class="section-title">Über Dich</h2>
     </div>
 
     <div class="q-card">
       <p class="q-label">Welches Lied liebst Du? <span style="color:var(--rose)">*</span></p>
-      <input type="text" id="f-lied" placeholder="Titel und Künstler:in (oder einfach das, woran du gerade denkst)" />
+      <input type="text" id="f-lied" placeholder="Titel und Künstler:in (oder einfach das, woran Du gerade denkst)" />
     </div>
 
     <div class="q-card">
@@ -612,7 +645,7 @@
 
     <div class="q-card">
       <p class="q-label">Möchtest Du mir etwas mitteilen?</p>
-      <textarea id="f-wuensche" placeholder="Raum für alles, was dir wichtig ist …" style="min-height:110px"></textarea>
+      <textarea id="f-wuensche" placeholder="Raum für alles, was Dir wichtig ist …" style="min-height:110px"></textarea>
     </div>
   </div>
 
@@ -651,7 +684,7 @@
 <div id="thank-you">
   <div class="ty-icon">🌿</div>
   <h2>Herzlichen Dank.</h2>
-  <p style="margin-bottom:20px">Ich freue mich sehr auf unsere gemeinsame Zeit und darauf, dich und dein Baby auf dem Weg zu begleiten.<br>Ich melde mich in Kürze bei dir.</p>
+  <p style="margin-bottom:20px">Ich freue mich sehr auf unsere gemeinsame Zeit und darauf, Dich und Dein Baby auf dem Weg zu begleiten.<br>Ich melde mich in Kürze bei Dir.</p>
   <p style="font-size:13px; color:var(--earth); font-style:italic; max-width:480px; margin:0 auto; line-height:1.85;">Mamafit ist ein liebevoller Raum für Mütter und Babys, in dem Bewegung, Verbindung und Stärke zusammenkommen. 🤍</p>
 </div>
 
